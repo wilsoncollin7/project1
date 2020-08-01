@@ -1,0 +1,16 @@
+Movie App Psuedocode
+
+1. User enters movie title in search box
+2. User enters their zip code in zip code box
+3. User clicks search button
+4. Info side displays movie information including the following:
+	- Movie Poster
+	- Movie Title
+	- Movie Year
+	- Movie Plot
+	- Movie Actors
+	- Movie Review Link
+	- Nearby Theater Link
+5. When review link is clicked, user is brought to New York Times review for selected movie (opens in new browser tab)
+6. When nearby theater link is clicked, a modal opens up displaying 3 nearby theaters based on user's zip code
+
