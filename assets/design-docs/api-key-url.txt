@@ -1,0 +1,64 @@
+NYT Movie Review API URL Layout:
+
+https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=MOVIE+NAME+HERE&api-key=fcbAXVUQU4auE0F0Q4KVCPAWLHAZWgnG
+
+Movie titles with more than one word MUST be separated by '+'
+
+
+Movie Reviews API
+
+Search New York Times movie reviews by keyword and opening date and filter by Critics' Picks.
+
+Get movie reviews that are critics' picks:
+/reviews/picks.json
+
+Get movie reviews with "lebowski" in the title:
+/reviews/search.json?query=lebowski
+
+Get movie reviews with "big" in the title that opened in the U.S. between 1980 and 1990:
+/reviews/search.json?query=big&opening-date=1980-01-01;1990-01-01
+
+Get all movie reviews by A. O. Scott:
+/critics/A.%20O.%20Scott.json
+
+Get movie critic names:
+/critics/all.json
+
+Example Call
+https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=yourkey
+
+Resource Types
+URIs are relative to https://api.nytimes.com/svc/movies/v2, unless otherwise noted.
+
+Critic
+For more information, see Critic.
+Method	Endpoint	Description
+GET	/critics/{reviewer}.json	
+Get movie critics. You can either specify the reviewer name or use "all", "full-time", or "part-time".
+
+Link
+For more information, see Link.
+Method	Endpoint	Description
+GET	/reviews/search.json	
+Search for movie reviews. Supports filtering by Critics' Pick.
+
+GET	/reviews/{type}.json	
+Get movie reviews. Can filter to only return Critics' Picks. Supports ordering results by-title, by-publication-date, or by-opening-date. Use offset to paginate thru results, 20 at a time.
+
+MultiMedia
+For more information, see MultiMedia.
+Method	Endpoint	Description
+GET	/reviews/search.json	
+Search for movie reviews. Supports filtering by Critics' Pick.
+
+GET	/reviews/{type}.json	
+Get movie reviews. Can filter to only return Critics' Picks. Supports ordering results by-title, by-publication-date, or by-opening-date. Use offset to paginate thru results, 20 at a time.
+
+Review
+For more information, see Review.
+Method	Endpoint	Description
+GET	/reviews/search.json	
+Search for movie reviews. Supports filtering by Critics' Pick.
+
+GET	/reviews/{type}.json	
+Get movie reviews. Can filter to only return Critics' Picks. Supports ordering results by-title, by-publication-date, or by-opening-date. Use offset to paginate thru results, 20 at a time.
