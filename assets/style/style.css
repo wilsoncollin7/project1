@@ -5,6 +5,11 @@
     font-family: 'Limelight', cursive;
 }
 
+.mainArticle {
+    margin-bottom: 150px;
+    width: 85%;
+}
+
 .footer {
     color: white;
     text-align: center;
@@ -14,4 +19,8 @@
     height: 80px;
     line-height: 70px;
     background-color: rgb(49, 49, 124);
+}
+
+@media screen and (max-width: 1660px) {
+    
 }
