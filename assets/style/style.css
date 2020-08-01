@@ -1,0 +1,17 @@
+.jumbotron {
+    background-color: rgb(49, 49, 124); 
+    color: white; 
+    text-align: center; 
+    font-family: 'Limelight', cursive;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 70px;
+    background-color: rgb(49, 49, 124);
+}
