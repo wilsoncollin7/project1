@@ -2,7 +2,33 @@ body {
     background-image: linear-gradient(to right, #969696a4, rgb(240, 240, 240), #969696a4);
 }
 
+@-webkit-keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: white    
+    }    
+}    
+@keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: black    
+    }    
+}    
+.borderBlink{    
+    border:1px solid white;
+    /* add 'border-color: transparent' if you wish no border to show initially */  
+}
+.borderBlink:hover {    
+    -webkit-animation: borderBlink 1s step-end infinite;    
+    animation: borderBlink 1s step-end infinite;    
+}
+
 .jumbotron {
+    border: 10px dotted white;
     background-color: rgb(49, 49, 124); 
     color: white; 
     text-align: center; 
