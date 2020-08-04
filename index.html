@@ -34,14 +34,14 @@
                             <input type="zipcode" class="form-control" id="zipcodeInput">
                         </div>
                     </form>
-                    <button type="submit" class="btn btn-primary mx-auto mb-2"><i class="fa fa-search" aria-hidden="true"></i> Submit</button>
+                    <button type="submit" class="btn btn-secondary mx-auto mb-2"><i class="fa fa-search" aria-hidden="true"></i> Submit</button>
                 </div>
                 <!-- card where the search history lives -->
                 <div class="card mb-4">
                     <div class="card-header">Search History</div>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary mx-auto mb-2 mt-2" data-toggle="modal" data-target="#exampleModal">
-                        View History
+                    <button type="button" class="btn btn-secondary mx-auto mb-2 mt-2" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-book" aria-hidden="true"></i> View
                     </button>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -84,11 +84,11 @@
                                                 <div class="row">
                                                     <!-- movie poster img -->
                                                     <div class="col-md-5" id="photoElm">
-                                                        <img src="http://placehold.it/200x300" alt="moviePoster">
+                                                        <img id="poster" src="https://images-na.ssl-images-amazon.com/images/I/515JnWohHTL._AC_.jpg" alt="moviePoster">
                                                     </div>
                                                     <!-- movie description -->
                                                     <div class="col-md-7">
-                                                        <h2 id="movieTitleHeader">Movie Title</h2>
+                                                        <h2 id="movieTitleHeader">Back To The Future</h2>
                                                         <p id="movieDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quam perferendis beatae nisi laborum minus, vero id doloribus ex quis eius consectetur a blanditiis, magni mollitia sunt provident quisquam explicabo est fuga minima modi? Iure sapiente veritatis, reprehenderit modi recusandae aperiam commodi tempore id illo! Unde optio cumque distinctio dolorem.</p>
                                                     </div>
                                                 </div>
@@ -112,8 +112,20 @@
                                 </div>
                             </div>
                             <!-- section for the location info -->
-                            <div class="col-md-6 border">
-                                Map
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">Theaters Near You</div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush" id="reviewList">
+                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,7 @@
+body {
+    background-image: linear-gradient(to right, #969696a4, rgb(240, 240, 240), #969696a4);
+}
+
 .jumbotron {
     background-color: rgb(49, 49, 124); 
     color: white; 
@@ -8,6 +12,17 @@
 .mainArticle {
     margin-bottom: 150px;
     width: 85%;
+}
+
+.card-header {
+    font-family: 'Limelight', cursive;
+    background-color: rgb(49, 49, 124);
+    color: white;
+}
+
+#poster {
+    width: 200px;
+    height: 300px;
 }
 
 .footer {
@@ -21,6 +36,10 @@
     background-color: rgb(49, 49, 124);
 }
 
-@media screen and (max-width: 1660px) {
+/* @media screen and (max-width: 1660px) {
+    body {
+        background-color: brown;
+        
+    }
     
-}
+} */
