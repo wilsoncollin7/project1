@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function getTheaters () {
 
     var zipcode = $('#zipcodeInput').text;
@@ -43,7 +42,8 @@ function getTheaters () {
 };
 
 getTheaters();
-=======
+
+
 // var movieTitle = ""; //grabbed from id: #movieTitleInput
 // var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieTitle + "&api-key=fcbAXVUQU4auE0F0Q4KVCPAWLHAZWgnG";
 
@@ -67,4 +67,3 @@ function getReview () {
 };
 
 getReview();
->>>>>>> d006728220c7ed6d1810ede8d8826fa10b432051
