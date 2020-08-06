@@ -1,7 +1,7 @@
 function getTheaters () {
 
-    var zipcode = $('#zipcodeInput').text;
-    var zipURL = "https://api.foursquare.com/v2/venues/search?client_id=HWEGQHCXDMLAMSA55FMIXBBOPPG3IWOE2APVKUVRLHB3GZVU&client_secret=0FDBXWBEBUAN5NDDZ2KZPE4UWLKPTVTB5PPMLPCEXHPSJKLN&v=20200801&categoryId=4bf58dd8d48988d17f941735&near=28560";    
+    var zipcode = $('#zipcodeInput').val();
+    var zipURL = "https://api.foursquare.com/v2/venues/search?client_id=HWEGQHCXDMLAMSA55FMIXBBOPPG3IWOE2APVKUVRLHB3GZVU&client_secret=0FDBXWBEBUAN5NDDZ2KZPE4UWLKPTVTB5PPMLPCEXHPSJKLN&v=20200801&categoryId=4bf58dd8d48988d17f941735&near=" + zipcode;    
 
     $.ajax({
         dataType: "json",
@@ -10,27 +10,49 @@ function getTheaters () {
         data: {},
             success: function( data ) {
                 // Code for handling API response
-                console.log(data);
+                console.log(zipcode);
+
+                $('#theaterList').empty();
                 
                 var venueData = data.response.venues;
 
-                for (var i = 0; i < 3; i++) {
+                for (var i = 0; i < 5; i++) {
 
-                    var theaterDiv = $('<div>');
-                    var titleP = $('<p>');
-                    var addressP = $('<p>');
-                    var citySpan = $('<span>');
-                    var stateSpan = $('<span>');
-                    var zipSpan = $('<span>');
+                    var venueString = "";
 
-                    titleP.text(venueData[i].name);
-                    addressP.text(venueData[i].location.address);
-                    citySpan.text(venueData[i].location.city);
-                    stateSpan.text(venueData[i].location.state);
-                    zipSpan.text(venueData[i].location.postalCode);
+                    if (venueData[i].name) {
+                        venueString += venueData[i].name;
+                    }
 
-                    theaterDiv.append(titleP, addressP, citySpan, stateSpan, zipSpan);
-                    $('.col-md-8').append(theaterDiv);
+                    if (venueData[i].location.address) {
+                        venueString += ", " + venueData[i].location.address;
+                    }
+
+                    if (venueData[i].location.city) {
+                        venueString += ", " + venueData[i].location.city;
+                    }
+
+                    if (venueData[i].location.state) {
+                        venueString += ", " + venueData[i].location.state;
+                    }
+
+                    if (venueData[i].location.postalCode) {
+                        venueString += ", " + venueData[i].location.postalCode;
+                    }
+
+                    var noCommas = venueString.replace(",", "");
+                    var searchString = noCommas.replace(" ", "+");
+                    var mapSearchURL = "https://google.com/maps/search/" + searchString;
+                    
+                    var li = $('<li>').addClass('list-group-item');
+                    var a = $('<a>').attr('target', '_blank');
+
+                    a.attr('href', mapSearchURL);
+                    a.text(venueString);
+
+                    li.append(a);
+
+                    $('#theaterList').append(li);
             };
         
         },
@@ -40,8 +62,6 @@ function getTheaters () {
     });
 
 };
-
-getTheaters();
 
 
 // var movieTitle = ""; //grabbed from id: #movieTitleInput
@@ -66,4 +86,4 @@ function getReview () {
  });
 };
 
-getReview();
+$('#search-button').on('click', getTheaters);
