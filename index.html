@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/photos/cinema.png">
+    <link rel="icon" href="assets/photos/cinema (1).png">
 </head>
 
 <body>
     <!-- Jumbotron header at top of page -->
     <header>
-        <div class="jumbotron w-75 m-auto">
-            <h1 class="display-4">Movie Search</h1>
+        <div class="jumbotron w-75 m-auto borderBlink">
+            <h1 class="display-4"><img class="popcorn" src="assets/photos/cinema (1).png"> Movie Search</h1>
         </div>
     </header>
     <!-- main container for the site -->
-    <section class="container-fluid p-5 mt-2 mainArticle">
+    <section class="container-fluid p-5 mainArticle">
         <article class="row">
             <!-- column which include the search and history function -->
-            <div class="col-md-2">
+            <div class="col-xl-2 searchCol">
                 <!-- card where the form lives -->
                 <div class="card mb-4">
                     <div class="card-header">Search Movies</div>
@@ -34,7 +34,7 @@
                             <input type="zipcode" class="form-control" id="zipcodeInput">
                         </div>
                     </form>
-                    <button type="submit" class="btn btn-secondary mx-auto mb-2"><i class="fa fa-search" aria-hidden="true"></i> Submit</button>
+                    <button type="submit" class="btn btn-secondary mx-auto mb-2" id="search-button"><i class="fa fa-search" aria-hidden="true"></i> Submit</button>
                 </div>
                 <!-- card where the search history lives -->
                 <div class="card mb-4">
@@ -70,26 +70,28 @@
                 </div>
             </div>
             <!-- column that includes the retrieved data section - this section is broken into many rows and columns -->
-            <div class="col-md-10">
+            <div class="col-xl-10">
                 <article class="row">
-                    <div class="col-md-12">
+                    <div class="col-xl-12">
                         <div class="row">
                             <!-- section where the movie info and reviews go -->
-                            <div class="col-md-6">
+                            <div class="col-xl-6">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-xl-12">
                                         <div class="card mb-4">
                                             <div class="card-body">
                                                 <!-- movie info section -->
                                                 <div class="row">
                                                     <!-- movie poster img -->
-                                                    <div class="col-md-5" id="photoElm">
-                                                        <img id="poster" src="https://images-na.ssl-images-amazon.com/images/I/515JnWohHTL._AC_.jpg" alt="moviePoster">
+                                                    <div class="col-xl-5 mb-4" id="photoElm">
+                                                        <img class="card-img rounded" id="poster" src="https://images-na.ssl-images-amazon.com/images/I/515JnWohHTL._AC_.jpg" alt="moviePoster">
                                                     </div>
                                                     <!-- movie description -->
-                                                    <div class="col-md-7">
-                                                        <h2 id="movieTitleHeader">Back To The Future</h2>
-                                                        <p id="movieDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quam perferendis beatae nisi laborum minus, vero id doloribus ex quis eius consectetur a blanditiis, magni mollitia sunt provident quisquam explicabo est fuga minima modi? Iure sapiente veritatis, reprehenderit modi recusandae aperiam commodi tempore id illo! Unde optio cumque distinctio dolorem.</p>
+                                                    <div class="col-xl-7">
+                                                        <h2 class="card-title" id="movieTitleHeader">Back To The Future</h2>
+                                                        <p class="card-text" id="movieYear">1985</p>
+                                                        <p class="card-text" id="movieDes">Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.</p>
+                                                        <p class="card-text" id="movieActors">Michael J. Fox, Christopher Lloyd, Lea Thompson</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -98,31 +100,43 @@
                                 </div>
                                 <!-- section for the movie reivews -->
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
+                                    <div class="col-xl-12">
+                                        <div class="card mb-4">
                                             <div class="card-body">
-                                                <ul class="list-group list-group-flush" id="reviewList">
-                                                    <li class="list-group-item">It was great.</li>
-                                                    <li class="list-group-item">It was okay.</li>
-                                                    <li class="list-group-item">I loved it!</li>
-                                                </ul>
+                                                <h5 class="card-title">See Review: <hr></h5>
+                                                <a id="reivewLink" href="" target="#">New York Times Review</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- section for the location info -->
-                            <div class="col-md-6">
+                            <div class="col-xl-6">
                                 <div class="card">
                                     <div class="card-header">Theaters Near You</div>
                                     <div class="card-body">
-                                        <ul class="list-group list-group-flush" id="reviewList">
-                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
-                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
-                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
-                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
-                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
-                                            <li class="list-group-item">4510 middlesex rd, Wilmington NC</li>
+                                        <ul class="list-group list-group-flush" id="theaterList">
+                                            <li class="list-group-item ">
+                                                <p class="theaterName">Theater Name</p>
+                                                <p>123 Main Str.</p>
+                                                <span>Townsville</span>
+                                                <span>North Carolina</span>
+                                                <span>27510 <a href="#" target="#"><img id="mapIcon" src="https://img.icons8.com/color/48/000000/google-maps.png" href="#"/></a></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <p class="theaterName">Theater Name</p>
+                                                <p>123 Main Str.</p>
+                                                <span>Townsville</span>
+                                                <span>North Carolina</span>
+                                                <span>27510 <a href="#" target="#"><img id="mapIcon" src="https://img.icons8.com/color/48/000000/google-maps.png" href="#"/></a></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <p class="theaterName">Theater Name</p>
+                                                <p>123 Main Str.</p>
+                                                <span>Townsville</span>
+                                                <span>North Carolina</span>
+                                                <span>27510 <a href="#" target="#"><img id="mapIcon" src="https://img.icons8.com/color/48/000000/google-maps.png" href="#"/></a></span>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
