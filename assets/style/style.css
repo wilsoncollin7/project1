@@ -1,8 +1,60 @@
 body {
     background-image: linear-gradient(to right, #969696a4, rgb(240, 240, 240), #969696a4);
+    font-size: large;
+}
+
+@-webkit-keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: white    
+    }    
+} 
+
+@keyframes borderBlink {    
+    from, to {    
+        border-color: white    
+    }    
+    50% {    
+        border-color: rgb(241, 209, 22)   
+    }    
+}  
+
+.borderBlink{    
+    border:1px solid white;
+    -webkit-animation: borderBlink 1s step-end infinite;    
+    animation: borderBlink 1s step-end infinite;  
+    /* add 'border-color: transparent' if you wish no border to show initially */  
+}
+
+@-webkit-keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: white    
+    }    
+}    
+@keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: black    
+    }    
+}    
+.borderBlink{    
+    border:1px solid white;
+    /* add 'border-color: transparent' if you wish no border to show initially */  
+}
+.borderBlink:hover {    
+    -webkit-animation: borderBlink 1s step-end infinite;    
+    animation: borderBlink 1s step-end infinite;    
 }
 
 .jumbotron {
+    border: 10px dotted white;
     background-color: rgb(49, 49, 124); 
     color: white; 
     text-align: center; 
@@ -20,9 +72,28 @@ body {
     color: white;
 }
 
+.popcorn {
+    width: 8%;
+}
+
 #poster {
-    width: 200px;
-    height: 300px;
+    width: 100%;
+}
+
+#mapIcon {
+    width: 10%;
+}
+
+#theaterList {
+    line-height: 25px;
+}
+
+#movieYear {
+    font-style: italic;
+}
+
+.theaterName {
+    font-weight: bold;
 }
 
 .footer {
@@ -36,10 +107,23 @@ body {
     background-color: rgb(49, 49, 124);
 }
 
-/* @media screen and (max-width: 1660px) {
-    body {
-        background-color: brown;
-        
+@media screen and (max-width: 1660px) {
+    .mainArticle {
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 1198px) {
+    .mainArticle {
+        font-size: xx-large;
     }
     
-} */
+    #poster {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .popcorn {
+        width: 15%;
+    }
+}
