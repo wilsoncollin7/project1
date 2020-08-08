@@ -1,28 +1,29 @@
-# project1
-This application sources and displays movie/theater information based on the users input.
+# The Movie Search
+With this app, our team created an interactive movie dashboard using the The Movie DB API to pull various movie information, the New York Times API to pull movie review information, and the FourSquare Places API to pull movie theater data close to the user's zip code. 
 
-Back End Team:
-Jesse O'Donoghue - 
-Haynes Brotherton -
+## Project Team
 
-Front End Team:
-Collin Wilson - 
-Arlene Rodriguez - 
+**Script Team**
+* Jesse O'Donoghue
+* Haynes Brotherton
+
+**UI Team**
+* Collin Wilson
+* Arlene Rodriguez
  
+## App Breakdown
+This app allows the user to input a movie and zip code. It then uses the three APIs mentioned above to retrieve the information for the selected movie, review, and theaters near the user's zip code. Recent searches are stored in local storage and searches can be performed from within the recent searches modal. 
 
-Benchmark Schedule:
+![The Movie Search](https://user-images.githubusercontent.com/66024509/89714946-221b4b00-d970-11ea-8713-ca6df28a248c.png)
 
-Session 1 (8/1): 
-Front End Goal - Wireframe Design Realization (id's, class, div)
-Back End Goal - Pseudocode (brainstorm/realize functions)/ API Research
+## Live Link
+A link to the live version of this app can be found below. 
+[The Movie Search](https://wilsoncollin7.github.io/project1/)
 
-Session 2 (8/4):
-Front End Goal - Finish Design
-Back End Goal - Merge id's, etc./ API integration
-
-Session 3(8/6):
-Front End Goal - Polish Design / Modal / Links Styling
-Back End Goal - Finish integration / Testing
-
-Session 4 (8/8): 
-Merge Day Goal: Finish all styling / debugging / add any "possible" functionalities
+### References & Resources 
+[W3Schools](https://w3schools.com)    
+[MDN Web Docs](https://developer.mozilla.org/en-US/)
+[StackOverflow](https://stackoverflow.com/)
+[The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction)
+[Foursquare Places API](https://developer.foursquare.com/docs/places-api/)
+[New York Times Movie Review API](https://developer.nytimes.com/docs/movie-reviews-api/1/overview)
