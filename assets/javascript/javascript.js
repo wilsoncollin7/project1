@@ -1,3 +1,8 @@
+$("#welcome-search-button").on("click", function() {
+    $(".welcomeJumbo").attr("style", "display: none;")
+    $(".mainArticle").attr("style", "display: block;")
+})
+
 function getTheaters () {
 
     console.log("working 2")
