@@ -112,6 +112,10 @@ body {
     background-color: rgb(61, 0, 0);
 }
 
+#gitLink {
+    color: white;
+}
+
 @media screen and (max-width: 1660px) {
     .mainArticle {
         font-size: x-large;
