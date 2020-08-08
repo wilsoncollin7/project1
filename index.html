@@ -12,8 +12,10 @@
 <body>
     <!-- Jumbotron header at top of page -->
     <header>
-        <div class="jumbotron w-75 m-auto borderBlink">
-            <h1 class="display-4"><img class="popcorn" src="assets/photos/cinema (1).png"> Movie Search</h1>
+        <div class="borderJumo w-75 m-auto borderBlink">
+            <div class="jumbotron m-auto mainJumbo">
+                <p class="display-3">Movie Search</p>
+            </div>
         </div>
     </header>
     <!-- main container for the site -->
@@ -56,9 +58,7 @@
                             <div class="modal-body">
                                 <!-- list where the saved search history goes - js should make a li element with the class="list-group-item 'historyID'" -->
                                 <ul class="list-group list-group-flush" id="historyList">
-                                    <li class="list-group-item">Titanic</li>
-                                    <li class="list-group-item">Star Wars</li>
-                                    <li class="list-group-item">Lord of the Rings</li>
+                                    <li class="btn list-group-item list-group-item-action">Titanic</li>
                                 </ul>
                             </div>
                             <div class="modal-footer">
@@ -84,14 +84,13 @@
                                                 <div class="row">
                                                     <!-- movie poster img -->
                                                     <div class="col-xl-5 mb-4" id="photoElm">
-                                                        <img class="card-img rounded" id="poster" src="https://images-na.ssl-images-amazon.com/images/I/515JnWohHTL._AC_.jpg" alt="moviePoster">
+                                                        <img class="card-img rounded" id="poster" src="">
                                                     </div>
                                                     <!-- movie description -->
                                                     <div class="col-xl-7">
-                                                        <h2 class="card-title" id="movieTitleHeader">Back To The Future</h2>
-                                                        <p class="card-text" id="movieYear">1985</p>
-                                                        <p class="card-text" id="movieDes">Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.</p>
-                                                        <p class="card-text" id="movieActors">Michael J. Fox, Christopher Lloyd, Lea Thompson</p>
+                                                        <h2 class="card-title" id="movieTitleHeader"></h2>
+                                                        <p class="card-text" id="movieYear"></p>
+                                                        <p class="card-text" id="movieDes"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -116,27 +115,7 @@
                                     <div class="card-header">Theaters Near You</div>
                                     <div class="card-body">
                                         <ul class="list-group list-group-flush" id="theaterList">
-                                            <li class="list-group-item ">
-                                                <p class="theaterName">Theater Name</p>
-                                                <p>123 Main Str.</p>
-                                                <span>Townsville</span>
-                                                <span>North Carolina</span>
-                                                <span>27510 <a href="#" target="#"><img id="mapIcon" src="https://img.icons8.com/color/48/000000/google-maps.png" href="#"/></a></span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p class="theaterName">Theater Name</p>
-                                                <p>123 Main Str.</p>
-                                                <span>Townsville</span>
-                                                <span>North Carolina</span>
-                                                <span>27510 <a href="#" target="#"><img id="mapIcon" src="https://img.icons8.com/color/48/000000/google-maps.png" href="#"/></a></span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p class="theaterName">Theater Name</p>
-                                                <p>123 Main Str.</p>
-                                                <span>Townsville</span>
-                                                <span>North Carolina</span>
-                                                <span>27510 <a href="#" target="#"><img id="mapIcon" src="https://img.icons8.com/color/48/000000/google-maps.png" href="#"/></a></span>
-                                            </li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -144,6 +123,26 @@
                         </div>
                     </div>
                 </article>
+            </div>
+        </article>
+    </section>
+
+    <section class="container-fluid p-5 welcomePage">
+        <article class="row">
+            <div class="jumbotron m-auto welcomeJumbo">
+                <h1 class="display-4">Welcome!</h1>
+                <h2 class="display-5">Search Below:</h2>
+                <form class="p-2">
+                    <div class="form-group">
+                        <label for="movieTitle">Movie Title</label>
+                        <input type="title" class="form-control" id="movieTitleInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode">Zipcode</label>
+                        <input type="zipcode" class="form-control" id="zipcodeInput">
+                    </div>
+                </form>
+                <button type="submit" class="btn btn-secondary mx-auto mb-2" id="welcome-search-button"><i class="fa fa-search" aria-hidden="true"></i> Submit</button>
             </div>
         </article>
     </section>
